@@ -1,6 +1,20 @@
-.attribution { 
-    font-size: 11px; text-align: center;
+@import 'global';
+@import 'components/feature';
+@import 'components/header';
+@import 'components/new';
+@import 'components/blog';
+@import 'components/nav';
+
+
+
+
+
+footer { 
+    padding-block: 10rem;
+    font-size: $f-body; 
+    text-align: center;
+    color: $very-dark-blue;
+    a {
+        color: $sof-red; 
+       }
  }
-.attribution a {
-     color: hsl(228, 45%, 44%); 
-    }

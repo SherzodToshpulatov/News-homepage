@@ -3,53 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./dist/style.css">
   <title>Frontend Mentor | News homepage</title>
 
 </head>
 <body>
+<header class="header wrapper">
+  <a href="">
+    <img class="header__logo" src="./assets/images/logo.svg" alt="homepage" width="64" height="40">
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+  </a>
 
-  The Bright Future of Web 3.0?
+  <nav class="nav" aria-label="site">
+    <button id="btnOpen" class="nav__open" area-labeledby="nav-label" aria-expanded="false">
+      <span id="nav-label" hidden>Navigation</span>
+      <svg width="40" height="17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z"/><path d="M0 0h40v3H0z"/></g></svg>
+    </button>
+    
+    
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+    <div class="nav__content">
+      <button id="btnClose" class="nav__close">
+        <svg width="32" height="31" xmlns="http://www.w3.org/2000/svg"><g fill="#00001A" fill-rule="evenodd"><path d="m2.919.297 28.284 28.284-2.122 2.122L.797 2.419z"/><path d="M.797 28.581 29.081.297l2.122 2.122L2.919 30.703z"/></g></svg>
+      </button>
+      <ul class="header__links">
+        <li>
+          <a class="header__link" href="#">Home</a>
+        </li>
+        <li>
+          <a class="header__link" href="#">New</a>
+        </li>
+        <li>
+          <a class="header__link" href="#">Popular</a>
+        </li>
+        <li>
+          <a class="header__link" href="#">Trending</a>
+        </li>
+        <li>
+          <a class="header__link" href="#">Categories</a>
+        </li>
+      </ul>
+    </div>
 
-  Read more
+    <div class="nav__overlay" aria-hidden="true"></div>
+    
 
-  New 
+    </div>
+  </nav>
+ 
+</header>
 
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
+<main >
+  <article class="wrapper grid">
+    <section class="feature">
+      <picture class="feature__picture">
+        <source media="(min-width: 700px)" 
+        srcset="./assets/images/image-web-3-desktop.jpg" 
+        width = "730px"
+        height = "300px"/>
+        <img 
+        class="feature__image" 
+        width="343px"
+        height="300px"
+        src="./assets/images/image-web-3-mobile.jpg" alt="Image of colorful blogs" />
+      </picture>
+      <h1 class="feature__headline">
+        The Bright Future of Web 3.0?
+      </h1>
+      <div class="feature__description">
+        <p >
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?
+        </p>
+    
+        <a class="feature__button" href="">Read more</a>
+      </div>
+    </section>
 
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
+    <section class="new">
+      <h2 class="new__title">New</h2>
+      <article class="new__post">
+        <h3 >
+          <a class="new__headline" href="">Hydrogen VS Electric Cars</a>
+        </h3>
+        <p class="new__desctiption">
+          Will hydrogen-fueled cars ever catch up to EVs?
+        </p>
+      </article>
+      <article class="new__post">
+        <h3 >
+          <a class="new__headline" href="">The Downsides of AI Artistry</a>
+        </h3>
+        <p class="new__desctiption">
+          What are the possible adverse effects of on-demand AI image generation?
+        </p>
+      </article>
+      <article class="new__post">
+        <h3 >
+          <a class="new__headline" href="">Is VC Funding Drying Up?</a>
+        </h3>
+        <p class="new__desctiption">
+          Private funding by VC firms is down 50% YOY. We take a look at what that means.
+        </p>
+      </article>
+    </section>
 
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+    <section class="blog">
+      <article class="blog__item">
+        <img width="100px" src="./assets/images/image-retro-pcs.jpg" alt="retro computer" class="blog__image">
+        <div class="blog__number">
+          01
+        </div>
+        <h3 class="blog__headline">
+          <a href="">Reviving Retro PCs</a>
+        </h3>
+        <p class="blog__description">
+          What happens when old PCs are given modern upgrades?
+        </p>
+      </article>
+      <article class="blog__item">
+        <img width="100px" src="./assets/images/image-top-laptops.jpg" alt="laptop keyboard" class="blog__image">
+        <div class="blog__number">
+          02
+        </div>
+        <h3 class="blog__headline">
+          <a href="">Top 10 Laptops of 2022</a>
+        </h3>
+        <p class="blog__description">
+          Our best picks for various needs and budgets.
+        </p>
+      </article>
+      <article class="blog__item">
+        <img width="100px" src="./assets/images/image-gaming-growth.jpg" alt="game controller" class="blog__image">
+        <div class="blog__number">
+          03
+        </div>
+        <h3 class="blog__headline">
+          <a href="">The Growth of Gaming</a>
+        </h3>
+        <p class="blog__description">
+          How the pandemic has sparked fresh opportunities.
+        </p>
+      </article>
+    </section>
 
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
+  </article>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+</main>
+<footer class="wrapper">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Sherzod</a>.
-  </div>
+</footer>
+<script src="index.js"></script>
 </body>
 </html>

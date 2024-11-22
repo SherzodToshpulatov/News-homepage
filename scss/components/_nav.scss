@@ -1,0 +1,52 @@
+@import '../global';
+
+.nav{
+
+    button{
+        
+        background: none;
+        border: none;
+        padding: 0;
+        @media (width >= 1110px){
+            display: none;
+        }
+    }
+
+    &__open[aria-expanded ='true']{
+
+        ~ .nav__content{
+            translate: 0;
+        }
+
+    }
+
+    &__content{
+        @media (width < 1110px) {
+            display: none;
+            position: fixed;
+            inset: 0 0 0 120px;
+            background-color: $off-white;
+            padding: 30px;
+            z-index: 1;
+            translate: 100vh 0;
+            transition: translate 500ms ease-in-out;
+        }
+    }
+
+    &__close{
+        display: block;
+        margin-inline-start: auto;
+        margin-block-end: 86px;
+
+    }
+
+    &__overlay{
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: $dark-grayish-blue;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
+
+}

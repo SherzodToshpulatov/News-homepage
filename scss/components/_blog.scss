@@ -1,0 +1,55 @@
+@import '../global';
+
+.blog{
+    display: grid;
+    gap: 1.875rem;
+
+    @media (width >= 1110px){
+        grid-template-columns: subgrid;
+        grid-column: 1 / 4;
+        padding-block-start: 2.5rem;
+    }
+
+    &__item{
+        display: grid;
+        grid-template-columns: 6.25rem auto;
+        grid-template-rows: repeat(3, auto);
+        column-gap: 1.5rem;
+
+    }
+
+    &__image{
+        grid-row: 1 / 4;
+    }
+
+    &__number{
+        color: $sof-red;
+        font-size: $f-m;
+        font-weight: 700;
+        line-height: 1;
+
+
+    }
+
+    &__headline{
+        align-self: center;
+        
+        
+        a{
+            color: $very-dark-blue;
+            font-weight: 800;
+            line-height: 1.1;
+            font-size: $f-xs;
+
+            &:hover{
+                color: $sof-red;
+            }
+        }
+
+    }
+
+    &__description{
+        align-self: end;
+        
+    }
+}

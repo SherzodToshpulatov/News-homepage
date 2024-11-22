@@ -1,0 +1,43 @@
+@import '../global';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.875rem;
+    @media (width >= 1110px) {
+        
+        
+        padding-block: 5.625rem 3.5rem;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @media (width >= 1110px){
+           flex-direction: row;
+            gap: 2.5rem;
+        }
+    }
+
+    &__logo{
+        width: 2.8125rem;
+        @media(width >= 1110px) {
+            width: 4rem;
+        }
+    }
+
+    &__link{
+        color: $very-dark-blue;
+        font-size: $f-xs;
+        line-height: 1.3;
+        @media(width >= 1110px){
+            font-size: $f-body;
+            color: $dark-grayish-blue;
+        }
+
+        &:hover{
+            color: $sof-red;
+        }
+    }
+}

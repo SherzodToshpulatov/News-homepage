@@ -1,0 +1,45 @@
+
+@import '../global';
+.new{
+    background-color: $very-dark-blue;
+    padding: 1.5rem 1.25rem;
+
+    @media (width >= 1110px){
+        grid-column:3 / 4 ;
+        grid-row:1 / 3 ;
+    }
+
+    &__title{
+        font-size: clamp(2rem, 1.823943661971831rem + 0.7511737089201878vw, 2.5rem);
+        color: $soft-orange;
+        
+
+    }
+    &__post{
+        padding-block: 1.875rem;
+        border-bottom: 1px solid $dark-grayish-blue;
+
+        &:last-child{
+            border: none;
+        }
+
+    }
+
+    &__headline {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-block-end: 0.5rem;
+        color: $off-white;
+
+        &:hover{
+            color: $soft-orange;
+        }
+
+    }
+
+    &__description{
+        font-size: $f-body;
+        color: $grayish-blue;
+    }
+}
