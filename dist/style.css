@@ -65,6 +65,10 @@ li {
   }
 }
 
+.noscroll {
+  overflow-y: hidden;
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -130,6 +134,10 @@ li {
     grid-template-rows: 300px auto auto;
     gap: 1.875rem;
   }
+}
+
+.noscroll {
+  overflow-y: hidden;
 }
 
 .feature {
@@ -238,6 +246,10 @@ li {
     grid-template-rows: 300px auto auto;
     gap: 1.875rem;
   }
+}
+
+.noscroll {
+  overflow-y: hidden;
 }
 
 .header {
@@ -351,6 +363,10 @@ li {
   }
 }
 
+.noscroll {
+  overflow-y: hidden;
+}
+
 .new {
   background-color: hsl(240, 100%, 5%);
   padding: 1.5rem 1.25rem;
@@ -452,6 +468,10 @@ li {
     grid-template-rows: 300px auto auto;
     gap: 1.875rem;
   }
+}
+
+.noscroll {
+  overflow-y: hidden;
 }
 
 .blog {
@@ -564,6 +584,10 @@ li {
   }
 }
 
+.noscroll {
+  overflow-y: hidden;
+}
+
 .nav button {
   background: none;
   border: none;
@@ -576,6 +600,9 @@ li {
 }
 .nav__open[aria-expanded=true] ~ .nav__content {
   translate: 0;
+}
+.nav__open[aria-expanded=true] ~ .nav__overlay {
+  opacity: 0.5;
 }
 @media (width < 1110px) {
   .nav__content {
@@ -601,6 +628,7 @@ li {
   background-color: hsl(236, 13%, 42%);
   opacity: 0;
   transition: opacity 300ms ease-in-out;
+  pointer-events: none;
 }
 
 footer {
